@@ -1,0 +1,116 @@
+$c-white: #ffffff;
+$c-offWhite: #c4c4c4;
+$c-black: rgb(62, 60, 61);
+$c-blue: #9ACDCB;
+
+body {
+  font-family: 'Dosis', sans-serif;
+  color: $c-white;
+  // Background pattern from Subtle Patterns
+  background: url('/images/pink-dust.png');
+  overflow: hidden;
+}
+
+.app {
+  height: 98vh;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.top {
+  height: 7rem;
+}
+
+.name {
+  font-size: 2.5rem;
+
+  > * + * {
+    margin-left: 1.5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+
+  > * + * {
+    margin-left: 4rem;
+  }
+}
+
+.sm-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.corner {
+  width: 7rem;
+  height: 7rem;
+  background: $c-white;
+  border-radius: 0.3rem;
+  transition: transform 1s, width 1s, height 1s;
+
+  &:hover {
+    width: 9rem;
+    height: 9rem;
+    transform: rotate(90deg);
+  }
+
+  &:hover .corner-title {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.top-left {
+  position: absolute;
+  top: -1.2rem;
+  left: -1.2rem;
+  background: linear-gradient(to bottom right, $c-offWhite, $c-white);
+}
+
+.top-right {
+  position: absolute;
+  top: -1.2rem;
+  right: -1.2rem;
+  background: linear-gradient(to bottom left, $c-offWhite, $c-white);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: -1.2rem;
+  right: -1.2rem;
+  background: linear-gradient(to top left, $c-offWhite, $c-white);
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: -1.2rem;
+  left: -1.2rem;
+  background: linear-gradient(to top right, $c-offWhite, $c-white);
+}
+
+.corner-title {
+  opacity: 0;
+  height: 0;
+  display: block;
+  color: $c-black;
+  transform: rotate(270deg);
+  font-size: 2rem;
+  transition: height 1s, opacity 1s;
+  text-align: center;
+}
