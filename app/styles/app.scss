@@ -2,6 +2,9 @@ $c-white: #ffffff;
 $c-offWhite: #c4c4c4;
 $c-black: rgb(62, 60, 61);
 $c-blue: #9ACDCB;
+$c-pink: #d99f9f;
+$c-yellow: #edec97;
+$c-green: #b6f291;
 
 body {
   font-family: 'Khand', sans-serif;
@@ -9,6 +12,19 @@ body {
   // Background pattern from Subtle Patterns
   background: url('/images/pink-dust.png');
   overflow: hidden;
+}
+
+.section {
+  margin: 1rem;
+}
+
+.container {
+  margin: auto;
+  max-width: 65rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .app {
@@ -62,7 +78,7 @@ body {
   height: 7rem;
   background: $c-white;
   border-radius: 0.3rem;
-  transition: transform 1s, width 1s, height 1s;
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
 
   &:hover {
     width: 9rem;
@@ -71,7 +87,7 @@ body {
   }
 
   &:hover .corner-title {
-    opacity: 1;
+    opacity: 0;
     height: auto;
   }
 }
@@ -104,13 +120,49 @@ body {
   background: linear-gradient(to top right, $c-offWhite, $c-white);
 }
 
+.blue {
+  &:hover {
+    background: $c-blue;
+  }
+}
+.green {
+  &:hover {
+    background: $c-green;
+  }
+}
+.pink {
+  &:hover {
+    background: $c-pink;
+  }
+}
+.yellow {
+  &:hover {
+    background: $c-yellow;
+  }
+}
+
 .corner-title {
-  opacity: 0;
+  opacity: 1;
   height: 0;
   display: block;
   color: $c-black;
-  transform: rotate(270deg);
-  font-size: 2rem;
-  transition: height 1s, opacity 1s;
+  font-size: 1.5rem;
+  transition: height 0.5s, opacity 0.5s;
   text-align: center;
+}
+
+.headshot {
+  width: 17rem;
+  border: $c-white solid 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.cell-container {
+  display: flex;
+  max-height: 17rem;
+  font-size: 1.1rem;
+
+  > * + * {
+    margin-left: 1rem;
+  }
 }

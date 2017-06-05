@@ -1,0 +1,49 @@
+<div class="app">
+  <div class="main">
+    <div class="top"></div>
+    <div class="middle">
+      <h3 class="name">
+        <span>N A T H A N</span>
+        <span>V R A N I C A R</span>
+      </h3>
+      <h4 class="subtitle">
+        web developer
+      </h4>
+    </div>
+    <div class="bottom">
+      <p>nathanvranicar@gmail.com</p>
+      <p>859-806-2118</p>
+      <div class="icons">
+        <a href="https://www.facebook.com/nathan.vranicar">
+          <img src="/images/facebook-icon.png" class="sm-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/nathan-vranicar-082640b2/">
+          <img src="/images/linkedin-icon.png" class="sm-icon">
+        </a>
+        <a href="https://github.com/nvranicar">
+          <img src="/images/github-icon.png" class="sm-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+  {{#link-to "bio"}}
+  <div class="top-left corner blue">
+    <h4 class="corner-title">bio</h4>
+  </div>
+  {{/link-to}}
+  {{#link-to "portfolio"}}
+  <div class="top-right corner pink">
+    <h4 class="corner-title">portfolio</h4>
+  </div>
+  {{/link-to}}
+  {{#link-to "resume"}}
+  <div class="bottom-right corner yellow">
+    <h4 class="corner-title">resume</h4>
+  </div>
+  {{/link-to}}
+  {{#link-to "contact"}}
+  <div class="bottom-left corner green">
+    <h4 class="corner-title">contact</h4>
+  </div>
+  {{/link-to}}
+</div>
