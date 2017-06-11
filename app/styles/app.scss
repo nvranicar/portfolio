@@ -5,6 +5,9 @@ $c-blue: #9ACDCB;
 $c-pink: #d99f9f;
 $c-yellow: #edec97;
 $c-green: #b6f291;
+$c-link: #24e6d4;
+
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 
 body {
   font-family: 'Khand', sans-serif;
@@ -12,6 +15,10 @@ body {
   // Background pattern from Subtle Patterns
   background: url('/images/pink-dust.png');
   overflow: hidden;
+}
+
+a {
+  color: $c-link;
 }
 
 .section {
@@ -182,4 +189,31 @@ body {
   &:hover {
     background: $c-yellow;
   }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(50% - 2rem);
+    margin: 1rem;
+    max-height: 13rem;
+    display: flex;
+
+    > * + * {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.site-pic {
+  max-width: 13rem;
+  border: $c-white solid 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.contact-item {
+  font-size: 3rem;
+  display: flex;
 }
