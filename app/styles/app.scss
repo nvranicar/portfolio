@@ -7,8 +7,6 @@ $c-yellow: #edec97;
 $c-green: #b6f291;
 $c-link: #24e6d4;
 
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-
 body {
   font-family: 'Khand', sans-serif;
   color: $c-white;
@@ -214,6 +212,11 @@ a {
 }
 
 .contact-item {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: flex;
+  margin: 1rem;
+}
+
+.contact-text {
+  margin: 0;
 }
