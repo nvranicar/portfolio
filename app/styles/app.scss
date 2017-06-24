@@ -220,3 +220,98 @@ a {
 .contact-text {
   margin: 0;
 }
+
+@media (min-width : 320px) and (max-width : 480px) {
+  body {
+    overflow: scroll;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .headshot {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .cell-container {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .container {
+    justify-content: flex-start;
+  }
+
+  .contact-item {
+    font-size: 1.3rem;
+    display: flex;
+    margin: 1rem;
+  }
+
+  .corner {
+    width: 5rem;
+    height: 5rem;
+
+    &:hover {
+      width: 5rem;
+      height: 5rem;
+      transform: rotate(90deg);
+    }
+  }
+
+  .corner-title {
+    font-size: 1rem;
+  }
+
+  .sm-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .bottom-right {
+    top: -0.5rem;
+    right: 4.7rem;
+  }
+
+  .bottom-left {
+    top: -0.5rem;
+    left: 4.7rem;
+  }
+
+  .top-left {
+    top: -0.5rem;
+    left: -0.9rem;
+  }
+
+  .top-right {
+    top: -0.5rem;
+    right: -0.9rem;
+  }
+
+  .site-pic {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: $c-white solid 0.2rem;
+    border-radius: 0.2rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+
+    &__item {
+      flex-basis: calc(50% - 2rem);
+      margin: 1rem;
+      max-height: 30rem;
+      display: flex;
+      flex-direction: column;
+
+      > * + * {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
