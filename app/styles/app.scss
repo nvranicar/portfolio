@@ -228,6 +228,8 @@ a {
 
   .name {
     font-size: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .headshot {
@@ -303,7 +305,7 @@ a {
     margin-top: 4rem;
 
     &__item {
-      flex-basis: calc(50% - 2rem);
+      flex-basis: calc(100% - 2rem);
       margin: 1rem;
       max-height: 30rem;
       display: flex;
